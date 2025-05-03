@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import CasinoGames from "@/components/casino/CasinoGames";
 import HeroBanner from "@/components/casino/HeroBanner";
 import PromotionSection from "@/components/casino/PromotionSection";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -55,6 +56,21 @@ const Index = () => {
 
         <CasinoGames />
         <PromotionSection />
+        
+        {/* Добавляем ссылку на колесо удачи */}
+        <section className="my-16 bg-gradient-to-r from-amber-900 to-amber-700 rounded-lg p-8 text-center">
+          <span className="text-4xl mb-4 block">🎡</span>
+          <h2 className="text-3xl font-bold mb-4">Испытайте свою удачу!</h2>
+          <p className="max-w-2xl mx-auto mb-8 text-lg">
+            Крутите наше Колесо Удачи и выигрывайте ценные призы: деньги, фриспины, VIP-статус и многое другое!
+            Одно бесплатное вращение каждый день для всех игроков.
+          </p>
+          <Link to="/lucky-wheel">
+            <Button className="bg-black hover:bg-gray-900 text-amber-500 font-bold px-8 py-4 text-lg">
+              Крутить колесо удачи
+            </Button>
+          </Link>
+        </section>
 
         <section className="text-center mt-16">
           <h2 className="text-3xl font-bold mb-6 text-amber-400">Готовы начать?</h2>
